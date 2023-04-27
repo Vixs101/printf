@@ -7,17 +7,17 @@
  * printchar - prints characters
  * @args: variable list
  * Return: 1 as the number of character printed
- * /
+ */
 int printchar(va_list args)
 {
-        char c;
+	char c;
 
 	c = va_arg(args, int);
 	_putchar(c);
 	return (1);
 }
 
-/** 
+/**
  * printstring - prints a string
  * @args: variable list
  * Return: length of a string
@@ -27,7 +27,7 @@ int printstring(va_list args)
 	char *s;
 
 	s = va_arg(args, char *);
-	fputs(S, stdout);
+	fputs(s, stdout);
 	return (strlen(s));
 }
 
@@ -35,6 +35,17 @@ int printstring(va_list args)
  * printpercent - prints a percentage sign
  * @args: variable list
  * Return: 1 as number of characters printed
+ */
+int printpercent(va_list args __attribute__((unused)))
+{
+	_putchar('%');
+	return (1);
+}
+
+/**
+ * print_int - prints integers
+ * @args: variable arguments
+ * Return: number of characters printed
  */
 int print_int(va_list args)
 {
@@ -44,19 +55,18 @@ int print_int(va_list args)
 
 	if (value < 0)
 	{
-		_putchar('-')'
+		_putchar('-');
 		value = -value;
 		count++;
 	}
-	do
-	{
-	        buffer[i++] = value % 10 + '0';
+	do {
+		buffer[i++] = value % 10 + '0';
 		value /= 10;
 	} while (value > 0);
 
 	while (i > 0)
 	{
-        	_putchar(buffer[--i]);
+		_putchar(buffer[--i]);
 		count++;
 	}
 	return (count);
