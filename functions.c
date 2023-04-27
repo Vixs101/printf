@@ -25,10 +25,16 @@ int printchar(va_list args)
 int printstring(va_list args)
 {
 	char *s;
+	int count = 0;
 
 	s = va_arg(args, char *);
-	fputs(s, stdout);
-	return (strlen(s));
+	while (*s != '\0')
+	{
+		_putchar(*s);
+		s++;
+		count++;
+	}
+	return (count);
 }
 
 /**
