@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+<<<<<<< HEAD
 /**
  * struct flags - struct containing flags to "turn on"
  * when a flag specifier is passed to _printf()
@@ -48,6 +49,14 @@ int print_octal(va_list l, flags_t *f);
 char *convert(unsigned long int num, int base, int lowercase);
 
 /* _printf */
+=======
+
+int _putchar(char c);
+int printchar(va_list args);
+int printstring(va_list args);
+int printpercent(va_list args);
+int print_int(va_list args);
+>>>>>>> 7321730483dcd06d76dbdadb1114ca466de2903b
 int _printf(const char *format, ...);
 
 /* get_print */
