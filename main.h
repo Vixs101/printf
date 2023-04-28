@@ -3,7 +3,8 @@
 
 #include <stdarg.h>
 
-
+int _binary(unsigned int num);
+int print_binary(va_list args);
 int _putchar(char c);
 int printchar(va_list args);
 int printstring(va_list args);

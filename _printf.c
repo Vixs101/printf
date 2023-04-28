@@ -38,6 +38,10 @@ int _printf(const char *format, ...)
 			{
 				count += print_int(args);
 			}
+			else if (*format == 'b')
+			{
+				count += print_binary(args);
+			}
 		}
 		else
 		{
